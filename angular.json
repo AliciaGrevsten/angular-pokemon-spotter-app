@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-pokemon-spotter-app"
+    }
+  },
+  "defaultProject": "angular-pokemon-spotter-app",
+  "cli": {
+    "analytics": false
+  }
 }
