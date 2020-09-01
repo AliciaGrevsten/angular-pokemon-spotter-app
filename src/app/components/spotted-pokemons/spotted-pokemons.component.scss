@@ -1,0 +1,19 @@
+.container {
+    border: 1px solid white;
+    max-height: 500px;
+    max-width: 250px;
+    padding: 1%;
+    margin: 1%;
+}
+
+#pokemonlist {
+    padding: 1%;
+    overflow-y: scroll;
+    max-height: 400px;
+    max-width: 250px;
+}
+
+dt {
+    border-top: 1px solid white;
+    padding-top: 10px;
+}
