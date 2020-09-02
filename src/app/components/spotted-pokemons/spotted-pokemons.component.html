@@ -1,0 +1,13 @@
+<div class="container">
+    <h4>Spotted Pokémons</h4>
+
+    <div id="pokemonlist">
+        <dl *ngFor="let pokemon of spottedPokemons">
+            <dt>{{ pokemon.type }}</dt>
+            <dd>Gender: {{ pokemon.gender }}</dd>
+            <dd>Location: {{ pokemon.location }}</dd>
+            <dd>Shiny: {{ pokemon.shiny }}</dd>
+        </dl>
+    </div>
+    
+</div>

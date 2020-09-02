@@ -8,13 +8,27 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterPokemonComponent } from './components/register-pokemon/register-pokemon.component';
 import { NavbarComponent } from './components/layout/navbar/navbar.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { SpottedPokemonsComponent } from './components/spotted-pokemons/spotted-pokemons.component';
+import { UnseenPokemonsComponent } from './components/unseen-pokemons/unseen-pokemons.component';
+import { UserStatsComponent } from './pages/user-stats/user-stats.component';
+import { SpottingStatsComponent } from './pages/spotting-stats/spotting-stats.component';
+import { LeastSpottedPokemonsComponent } from './components/least-spotted-pokemons/least-spotted-pokemons.component';
+import { BestPlayersComponent } from './components/best-players/best-players.component';
+import { OverallRankComponent } from './components/overall-rank/overall-rank.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterPokemonComponent,
-    NavbarComponent
+    NavbarComponent,
+    SpottedPokemonsComponent,
+    UnseenPokemonsComponent,
+    UserStatsComponent,
+    SpottingStatsComponent,
+    LeastSpottedPokemonsComponent,
+    BestPlayersComponent,
+    OverallRankComponent
   ],
   imports: [
     BrowserModule,
