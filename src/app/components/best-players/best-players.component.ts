@@ -8,6 +8,7 @@ import { newArray } from '@angular/compiler/src/util';
 })
 export class BestPlayersComponent implements OnInit {
 players : any;
+topTen : any;
   constructor() {
    this.players=[
      {
@@ -87,9 +88,10 @@ players : any;
 
   ngOnInit(): void {
    const arr = this.players.sort(this.sortTopTenPlayers);
-   const newArr = arr.filter(rank => rank < 10);
-  //  let arr = this.players.reduce(this.listTopTenPlayers);
-    console.log(newArr);
+    this.topTen = arr.filter((player,rank) => rank < 10);
+    console.log(this.topTen);
+
+    //  let arr = this.players.reduce(this.listTopTenPlayers);
   }
 
  sortTopTenPlayers(a,b){
