@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { newArray } from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-best-players',
@@ -85,6 +86,27 @@ players : any;
    }
 
   ngOnInit(): void {
+    this.players.sort(this.sortTopTenPlayers);
+  //  let arr = this.players.reduce(this.listTopTenPlayers);
+  //  console.log(arr);
   }
+
+ sortTopTenPlayers(a,b){
+
+   return b.spottingsRanknings - a.spottingsRanknings;
+ 
+//  this.players.filter(this.players => this.players>= 7);
+ }
+// listTopTenPlayers(acc, val){
+//   for(let i =0; i < 10; i++){
+//     if(val.spottingsRanknings > acc.spottingsRanknings){
+//       acc = val;
+//     }
+//   }
+//   return acc;
+
+// }
+ 
+ 
 
 }
