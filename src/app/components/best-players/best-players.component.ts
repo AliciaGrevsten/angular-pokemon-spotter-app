@@ -91,24 +91,12 @@ topTen : any;
     this.topTen = arr.filter((player,rank) => rank < 10);
     console.log(this.topTen);
 
-    //  let arr = this.players.reduce(this.listTopTenPlayers);
   }
 
  sortTopTenPlayers(a,b){
    return b.spottingsRanknings - a.spottingsRanknings;
- 
-//  this.players.filter(this.players => this.players>= 7);
  }
-// listTopTenPlayers(acc, val){
-//   for(let i =0; i < 10; i++){
-//     if(val.spottingsRanknings > acc.spottingsRanknings){
-//       acc = val;
-//     }
-//   }
-//   return acc;
 
-// }
- 
  
 
 }
