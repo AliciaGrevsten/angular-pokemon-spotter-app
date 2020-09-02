@@ -11,6 +11,8 @@ import { UnseenPokemonsComponent } from './components/unseen-pokemons/unseen-pok
 import { UserStatsComponent } from './pages/user-stats/user-stats.component';
 import { SpottingStatsComponent } from './pages/spotting-stats/spotting-stats.component';
 import { LeastSpottedPokemonsComponent } from './components/least-spotted-pokemons/least-spotted-pokemons.component';
+import { BestPlayersComponent } from './components/best-players/best-players.component';
+import { OverallRankComponent } from './components/overall-rank/overall-rank.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { LeastSpottedPokemonsComponent } from './components/least-spotted-pokemo
     UnseenPokemonsComponent,
     UserStatsComponent,
     SpottingStatsComponent,
-    LeastSpottedPokemonsComponent
+    LeastSpottedPokemonsComponent,
+    BestPlayersComponent,
+    OverallRankComponent
   ],
   imports: [
     BrowserModule,
