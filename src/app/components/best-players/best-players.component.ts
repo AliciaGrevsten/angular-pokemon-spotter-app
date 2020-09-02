@@ -86,13 +86,13 @@ players : any;
    }
 
   ngOnInit(): void {
-    this.players.sort(this.sortTopTenPlayers);
+   const arr = this.players.sort(this.sortTopTenPlayers);
+   const newArr = arr.filter(rank => rank < 10);
   //  let arr = this.players.reduce(this.listTopTenPlayers);
-  //  console.log(arr);
+    console.log(newArr);
   }
 
  sortTopTenPlayers(a,b){
-
    return b.spottingsRanknings - a.spottingsRanknings;
  
 //  this.players.filter(this.players => this.players>= 7);
