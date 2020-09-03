@@ -1,20 +1,6 @@
 <app-navbar></app-navbar>
 <app-best-players></app-best-players>
 
-<app-register-pokemon></app-register-pokemon>
-<google-map
-  height="400px"
-  width="80%"
-  [zoom]="zoom"
-  [center]="center"
-  [options]="options"
-  (mapClick)="click($event)"
->
-  
 
-  <map-info-window>{{ infoContent }}</map-info-window>
-</google-map>
 
-<button (click)="zoomIn()">Zoom in</button>
-<button (click)="zoomOut()">Zoom out</button>
 <router-outlet></router-outlet>

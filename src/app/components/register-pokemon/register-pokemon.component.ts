@@ -9,6 +9,11 @@ import { map } from 'rxjs/operators';
   
 })
 export class RegisterPokemonComponent implements OnInit {
+  zoom: number = 8;
+  private event: MouseEvent;
+  
+  lat: number = 59.334591;
+  lng: number = 18.063240;
   name = 'Angular ' + VERSION.major;
   data:any = []
   constructor(private http: HttpClient) {}
@@ -26,6 +31,37 @@ export class RegisterPokemonComponent implements OnInit {
       console.log(this.data)
       })
   }
+  clickedMarker(label: string, index: number) {
+    console.log(`clicked the marker: ${label || index}`)
+  }
   
+  mapClicked($event: any) {
+    this.markers.push({
+      lat: $event.coords.lat,
+      lng: $event.coords.lng,
+      draggable: true
+    });
+  }
   
+  markerDragEnd(m: marker, $event: MouseEvent) {
+    console.log('dragEnd', m, $event);
+  }
+  
+  markers: marker[] = [
+	  {
+		  lat: 59.334591,
+		  lng: 18.063240,
+		  draggable: true
+	  }
+  ]
 }
+
+interface marker {
+	lat: number;
+	lng: number;
+	label?: string;
+	draggable: boolean;
+}
+  
+  
+

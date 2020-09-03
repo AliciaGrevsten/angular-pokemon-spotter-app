@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterPokemonComponent } from './components/register-pokemon/register-pokemon.component';
 import { NavbarComponent } from './components/layout/navbar/navbar.component';
-import { GoogleMapsModule } from '@angular/google-maps';
+import { AgmCoreModule } from '@agm/core';
 import { SpottedPokemonsComponent } from './components/spotted-pokemons/spotted-pokemons.component';
 import { UnseenPokemonsComponent } from './components/unseen-pokemons/unseen-pokemons.component';
 import { UserStatsComponent } from './pages/user-stats/user-stats.component';
@@ -34,7 +34,9 @@ import { OverallRankComponent } from './components/overall-rank/overall-rank.com
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    GoogleMapsModule
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyB_3wnS3zXe6KgpMxK2hVEafL5fsyvBN0I',
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
