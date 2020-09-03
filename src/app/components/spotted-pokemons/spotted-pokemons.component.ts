@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Pokemon } from '../../models/Pokemon';
+import { SessionService } from 'src/app/services/Session/session.service';
+import { UserService } from 'src/app/services/User/user.service';
 
 @Component({
   selector: 'app-spotted-pokemons',
@@ -9,13 +11,18 @@ import { Pokemon } from '../../models/Pokemon';
 export class SpottedPokemonsComponent implements OnInit {
   spottedPokemons:Pokemon[];
 
-  constructor() { }
+  constructor(private session: SessionService) { 
+    if(this.session.get() !== '') {
+      
+    }
+  }
 
   ngOnInit(): void {
-    this.spottedPokemons = [
+    /* this.spottedPokemons = [
       {
         id: 1,
-        type: 'Pikachu',
+        pokemon: 'Pikachu',
+        type: 'Electric',
         gender: 'male',
         shiny: false,
         location: 'the forest',
@@ -23,7 +30,8 @@ export class SpottedPokemonsComponent implements OnInit {
       },
       {
         id: 1,
-        type: 'Togepi',
+        pokemon: 'Togepi',
+        type: '',
         gender: 'female',
         shiny: false,
         location: 'With the excute eggs',
@@ -31,7 +39,8 @@ export class SpottedPokemonsComponent implements OnInit {
       },
       {
         id: 1,
-        type: 'Lugia',
+        pokemon: 'Lugia',
+        type: '',
         gender: 'male',
         shiny: false,
         location: 'That is a secret...',
@@ -39,13 +48,14 @@ export class SpottedPokemonsComponent implements OnInit {
       },
       {
         id: 1,
-        type: 'Bulbasaur',
+        pokemon: 'Bulbasaur',
+        type: 'Grass',
         gender: 'male',
         shiny: false,
         location: 'Protecting the orphane pokemons',
         dateTime: Date.now()
       }
-    ]
+    ] */
   }
 
 }

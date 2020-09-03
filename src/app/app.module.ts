@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,8 +13,10 @@ import { UnseenPokemonsComponent } from './components/unseen-pokemons/unseen-pok
 import { UserStatsComponent } from './pages/user-stats/user-stats.component';
 import { SpottingStatsComponent } from './pages/spotting-stats/spotting-stats.component';
 import { LeastSpottedPokemonsComponent } from './components/least-spotted-pokemons/least-spotted-pokemons.component';
+import { RegisterComponent } from './components/register/register.component';
 import { BestPlayersComponent } from './components/best-players/best-players.component';
 import { OverallRankComponent } from './components/overall-rank/overall-rank.component';
+import { SpottingRankingsComponent } from './pages/spotting-rankings/spotting-rankings.component';
 
 @NgModule({
   declarations: [
@@ -27,8 +29,10 @@ import { OverallRankComponent } from './components/overall-rank/overall-rank.com
     UserStatsComponent,
     SpottingStatsComponent,
     LeastSpottedPokemonsComponent,
+    RegisterComponent,
     BestPlayersComponent,
-    OverallRankComponent
+    OverallRankComponent,
+    SpottingRankingsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { newArray } from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-best-players',
@@ -6,85 +7,96 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./best-players.component.scss']
 })
 export class BestPlayersComponent implements OnInit {
-players : any;
+  players: any;
+  topTen: any;
   constructor() {
-   this.players=[
-     {
-       id:1,
-       name:'player one',
-       spottingsRanknings:2
+    this.players = [
+      {
+        id: 1,
+        name: 'player one',
+        spottingsRanknings: 2
 
-     },
-     {
-      id:2,
-      name:'player one',
-      spottingsRanknings: 100
+      },
+      {
+        id: 2,
+        name: 'player one',
+        spottingsRanknings: 100
 
-    },
-    {
-      id:3,
-      name:'player one',
-      spottingsRanknings:99
+      },
+      {
+        id: 3,
+        name: 'player one',
+        spottingsRanknings: 99
 
-    },
-    {
-      id:4,
-      name:'player one',
-      spottingsRanknings:78
+      },
+      {
+        id: 4,
+        name: 'player one',
+        spottingsRanknings: 78
 
-    },
-    {
-      id:5,
-      name:'player one',
-      spottingsRanknings:56
+      },
+      {
+        id: 5,
+        name: 'player one',
+        spottingsRanknings: 56
 
-    },
-    {
-      id:6,
-      name:'player one',
-      spottingsRanknings:345
+      },
+      {
+        id: 6,
+        name: 'player one',
+        spottingsRanknings: 345
 
-    },
-    {
-      id:7,
-      name:'player one',
-      spottingsRanknings:90
+      },
+      {
+        id: 7,
+        name: 'player one',
+        spottingsRanknings: 90
 
-    },
-    {
-      id:8,
-      name:'player one',
-      spottingsRanknings:4
+      },
+      {
+        id: 8,
+        name: 'player one',
+        spottingsRanknings: 4
 
-    },
-    {
-      id:9,
-      name:'player one',
-      spottingsRanknings:9
+      },
+      {
+        id: 9,
+        name: 'player one',
+        spottingsRanknings: 9
 
-    },
-    {
-      id:10,
-      name:'player one',
-      spottingsRanknings:29
+      },
+      {
+        id: 10,
+        name: 'player one',
+        spottingsRanknings: 29
 
-    },
-    {
-      id:11,
-      name:'player one',
-      spottingsRanknings:47
+      },
+      {
+        id: 11,
+        name: 'player one',
+        spottingsRanknings: 47
 
-    },
-    {
-      id:12,
-      name:'player one',
-      spottingsRanknings:78
+      },
+      {
+        id: 12,
+        name: 'player one',
+        spottingsRanknings: 78
 
-    },
-   ]
-   }
+      },
+    ]
+  }
 
   ngOnInit(): void {
+    const arr = this.players.sort(this.sortTopTenPlayers);
+    this.topTen = arr.filter((player, rank) => rank < 10);
+    console.log(this.topTen);
+
   }
+
+  sortTopTenPlayers(a, b) {
+    return b.spottingsRanknings - a.spottingsRanknings;
+  }
+
+
 
 }
