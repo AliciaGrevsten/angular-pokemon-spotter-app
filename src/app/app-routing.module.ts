@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SpottingStatsComponent } from './pages/spotting-stats/spotting-stats.component'
+import { SpottingRankingsComponent } from './pages/spotting-rankings/spotting-rankings.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'spottingstats',
     component: SpottingStatsComponent
+  },
+  {
+    path:'spottingrankings',
+    component: SpottingRankingsComponent
   }
 ];
 
