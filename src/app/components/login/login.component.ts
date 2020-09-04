@@ -9,18 +9,18 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-
-  constructor(private session: SessionService, private router: Router) { 
-    if (this.session.get() !== ''){
-      this.router.navigateByUrl('/spottingstats');
-    }
-  }
+constructor(){}
+  // constructor(private session: SessionService, private router: Router) { 
+  //   if (this.session.get() !== ''){
+  //     this.router.navigateByUrl('/spottingstats');
+  //   }
+  // }
 
   ngOnInit(): void {
   }
 
-  onLoginClicked() {
-    this.session.save('abcdefg');
-    this.router.navigateByUrl('/spottingstats');
-  }
+  // onLoginClicked() {
+  //   this.session.save('abcdefg');
+  //   this.router.navigateByUrl('/spottingstats');
+  // }
 }

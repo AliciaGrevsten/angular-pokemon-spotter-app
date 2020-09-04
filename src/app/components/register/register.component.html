@@ -3,14 +3,14 @@
 <form>
     <div>
         <label for="username">Username: </label>
-        <input type="text" name="username" id="username" placeholder="Enter your username">
+        <input type="text" name="username" id="username" placeholder="Enter your username" >
     </div>
     <div>
         <label for="password">Password:</label>
         <input type="password" name="password" id="password" placeholder="Enter your password">
     </div>
     <br>
-    <button (click)="onRegisterClicked()" type="button">Register</button>
+    <button (click)="gettoken()" type="button">Register</button>
 </form>
 <br>
-<a href="#">Already have an account? Register now!</a>
+<a href="#" routerLink="/login">Already have an account? Login now!</a>
