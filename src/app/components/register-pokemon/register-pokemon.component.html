@@ -1,1 +1,58 @@
-<p>register-pokemon works!</p>
+<div class="container">
+    <h1>
+        Welcome!
+    </h1>
+    <p>Here you can register a spotted pokemon</p>
+
+    <select class="pokemon">
+        <option value="default">Select pokemon</option>
+        <option *ngFor="let item of data" [value]="item.name">{{item.name}}</option>
+    </select>
+    <br>
+    <select class="gender">
+        <option value="default">Select pokemon's gender</option>
+        <option value="first">Female</option>
+        <option value="second">Male</option>
+    </select>
+    <br>
+    <select class="shiny">
+        <option value="default">Is it shiny or not?</option>
+        <option value="yes">Shiny</option>
+        <option value="no">Not shiny</option>
+    </select>
+    <br>
+    <label for="time-date">When did you spot this pokemon?</label>
+    <br>
+    <input type="datetime-local" id="time-date" name="time-date" value="2020-09-02T19:30" min="2020-01-01T00:00"
+        max="2020-09-02T19:30">
+    <br>
+    <input type="submit" value="Register!">
+    <p>Please place the red marker on the map where you spotted this pokemon</p>
+    <agm-map 
+      [latitude]="lat"
+      [longitude]="lng"
+      [zoom]="zoom"
+      [disableDefaultUI]="false"
+      (mapClick)="mapClicked($event)">
+    
+      <agm-marker 
+          *ngFor="let m of markers; let i = index"
+          (markerClick)="clickedMarker(m.label, i)"
+          [latitude]="m.lat"
+          [longitude]="m.lng"
+          [markerDraggable]="m.draggable"
+          (dragEnd)="markerDragEnd(m, $event)">
+          
+        
+      </agm-marker>
+      
+      <agm-circle [latitude]="lat + 0.3" [longitude]="lng" 
+          [radius]="5000"
+          [fillColor]="'red'"
+          [circleDraggable]="true"
+          [editable]="true">
+      </agm-circle>
+    
+    </agm-map>
+
+</div>

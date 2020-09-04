@@ -1,4 +1,4 @@
-<h1>Login to Pokémon Spotter</h1>
+<h1>Register Account</h1>
 
 <form>
     <div>
@@ -10,7 +10,7 @@
         <input type="password" name="password" id="password" placeholder="Enter your password" [(ngModel)]="password">
     </div>
     <br>
-    <button  type="button" >Login</button>
+    <button (click)="gettoken()" type="button">Register</button>
 </form>
 <br>
-<a href="#" routerLink="/register">Don't have an account? Register now!</a>
+<a href="#" routerLink="/login">Already have an account? Login now!</a>

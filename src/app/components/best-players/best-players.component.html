@@ -1,8 +1,9 @@
 <div>
-    <ul *ngFor="let player of players">
-        <li>
-            {{player.name}}
-            {{player.spottingsRanknings}}
-        </li>
-    </ul>
+    <h1>Top 10 best players"Style is not finished"</h1>
+    <div class="card border-info mb-3" style="max-width: 20rem;" *ngFor="let player of topTen">
+        <div class="card-header"> {{player.name}}</div>
+        <div class="card-body">
+            <h4 class="card-title">Spotings Ranking: {{player.spottingsRanknings}}</h4>
+        </div>
+    </div>
 </div>
