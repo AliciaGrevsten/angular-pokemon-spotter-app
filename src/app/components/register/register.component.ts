@@ -31,8 +31,8 @@ export class RegisterComponent implements OnInit {
  	}
 	gettoken() {
 		const config = {
-		redirect_uri: '<your redirect link here>',
-		client_id: '<your app id here>',
+		redirect_uri: 'http://localhost:4200/spottingrankings',
+		client_id: '20d01be566e61737e0d07ac0ae50dfdb30f2f4d6853a8423a44436d5365d0b16',
 		scope: 'read_user openid profile email',
 		response_type: 'token'
 		}

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule} from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -38,6 +39,7 @@ import { SpottingRankingsComponent } from './pages/spotting-rankings/spotting-ra
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB_3wnS3zXe6KgpMxK2hVEafL5fsyvBN0I',
     })

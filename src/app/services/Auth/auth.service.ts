@@ -9,8 +9,8 @@ import { User } from '../../models/User';
 export class AuthService {
 
   auth_config = {
-    redirect_uri: "http://localhost:4200/spottingstats", // change this 
-    client_id: "37366e1f3ec6bb3cf2c651a6bd6e08682ec35f9054bf272232f6f8c45c6fda51",
+    redirect_uri: "http://localhost:4200/spottingrankings", // change this 
+    client_id: "20d01be566e61737e0d07ac0ae50dfdb30f2f4d6853a8423a44436d5365d0b16",
     scope: "read_user openid profile email",
     response_type: "token",
   };
